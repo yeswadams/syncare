@@ -10,15 +10,16 @@ const App = () => {
     <main className="flex h-screeen">
       <Routes>
 
-        // public routes
+        {/*public roots */}
+
         <Route element={<AuthLayout />}>
           <Route path="/signup" element={<SignupForm />} />
           <Route path="/signin" element={<SigninForm />} />
         </Route>
-        
-        // private roots
+
+        {/*private roots */}
         <Route element={<RootLayout />}>
-          <Route index element={<Home />} />  // The starting page
+          <Route path="/" element={<Home />} />  {/* The starting page */} 
         </Route>
                 
       </Routes>
